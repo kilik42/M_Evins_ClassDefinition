@@ -44,14 +44,15 @@ class RandomNumbers {
     
     
     //from array to dictionary --> heaven help me!
-//    func dictionaryStoreArray(_result: Array<Int>)->[Int:Int]{
-//        let _result: Array<Int> =  self.result
-//        let list : [Int] = _result
+    func dictionaryStoreArray(_result1: Array<Int>, _result2: Array<Int>)->[Int:Int]{
+        //let _result: Array<Int> =  self.result
+//        let list : _result1 =  _result2
 //        let result = Dictionary(uniqueKeysWithValues: list.lazy.map { ($0, "\($0)") })
 //        //print(result)
-//        return
-//
-//    }
+//        return result
+        
+
+    }
     
 }
 
@@ -71,7 +72,6 @@ var smallestNumArray = array.sortRandomizedArraySmallest(result: array1)
 print(smallestNumArray)
 
 //trying from array to dictionary
-
     //wrong code below it is old
     //var dict = array.dictionaryStoreArray(_result: array1)
 
