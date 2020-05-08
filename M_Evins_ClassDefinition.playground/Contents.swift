@@ -32,25 +32,22 @@ class RandomNumbers {
     //sort array by largest number
     func sortRandomizedArrayLargest(result: Array<Int>)->Array<Int>{
         //sort highest to lowest
-        let result = result.sorted(by: {$0 > $1})
-        return result
+        let resultLarge = result.sorted(by: {$0 > $1})
+        return resultLarge
     }
     //sort array by lowest number
     func sortRandomizedArraySmallest(result: Array<Int>)->Array<Int>{
         //sort highest to lowest
-        let result = result.sorted(by: {$0 < $1})
-        return result
+        let resultSmall = result.sorted(by: {$0 < $1})
+        return resultSmall
     }
     
     
     //from array to dictionary --> heaven help me!
-    func dictionaryStoreArray(_result1: Array<Int>, _result2: Array<Int>)->[Int:Int]{
-        //let _result: Array<Int> =  self.result
-//        let list : _result1 =  _result2
-//        let result = Dictionary(uniqueKeysWithValues: list.lazy.map { ($0, "\($0)") })
-//        //print(result)
-//        return result
-        
+    func dictionaryStoreArray(_result1: Array<Int>, _result2: Array<Int>)->[Array<Int>:Array<Int>]{
+        var myDict = [Array<Int>:Array<Int>]()
+        myDict[_result1] = _result2
+        return myDict
 
     }
     
@@ -64,8 +61,8 @@ let array = RandomNumbers()
 var array1 = array.generateRandomNumbers(size:10)
 
 //calling sorted by largest ----> it works
-var largestNumArrary = array.sortRandomizedArrayLargest(result: array1)
-print(largestNumArrary)
+var largestNumArray = array.sortRandomizedArrayLargest(result: array1)
+print(largestNumArray)
 
 //calling sorted by smallest
 var smallestNumArray = array.sortRandomizedArraySmallest(result: array1)
@@ -74,7 +71,8 @@ print(smallestNumArray)
 //trying from array to dictionary
     //wrong code below it is old
     //var dict = array.dictionaryStoreArray(_result: array1)
-
+var dictTest = array.dictionaryStoreArray(_result1: largestNumArray, _result2: smallestNumArray)
+print(dictTest)
 
 
 //sample code for array to dictionary
